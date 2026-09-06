@@ -30,7 +30,8 @@ Then include the following.
 
 ## Exposure
 
-- **Metrics** — `/metrics` and the landing page serve unauthenticated plain HTTP, which is the documented posture, so keep the port on a controlled path.
+- **Metrics** — `/metrics` and the landing page serve unauthenticated plain HTTP.
+- **Posture** — that is documented rather than accidental, so keep the port on a controlled path.
 - **Container** — the image is built from `scratch`, runs as UID 65534 and carries one CA bundle.
 
 ## Out of Scope

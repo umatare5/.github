@@ -38,7 +38,8 @@ Released images carry `amd64` and `arm64`, and GoReleaser pushes them to `ghcr.i
 
 - **Placement** — a test is a `*_test.go` beside the code, named for the behaviour it pins.
 - **Mutation** — check a new test by reversing the change it pins and watching it fail.
-- **Fixtures** — a fixture carries the shape the real source emits, with addresses from the RFC 5737 documentation ranges or RFC 1918, never from a monitored network or a real device.
+- **Fixtures** — a fixture carries the shape the real source emits, not an invented one.
+- **Addresses** — RFC 5737 or RFC 1918, never a monitored network or a real device.
 - **Example rules** — CI lints and unit-tests them with `promtool`, which no hook covers.
 
 ## Code Style
@@ -53,7 +54,8 @@ A HELP string is one sentence stating the reading of one series. Prometheus voca
 
 Every fact has one page that owns it, and the other pages link to it rather than restating it. `README.md` says what the exporter is and how to run it, and the pages under `docs/` carry the metric catalogue, the flag reference and the rules every collector obeys.
 
-- **Headings are pinned** — `.markdownlint-cli2.jsonc` fixes each page's `#` and `##` headings in order, so a heading change ships with its contract in the same pull request.
+- **Headings are pinned** — `.markdownlint-cli2.jsonc` fixes each page's `#` and `##` in order.
+- **Contracts travel** — a heading change ships with its contract in the same pull request.
 - **The transcript is verbatim** — `docs/help.md` carries the binary's own `--help` output.
 - **Links are checked in CI only** — that run reaches third-party hosts, and `lychee .` reproduces it.
 
@@ -81,4 +83,5 @@ Nothing in a commit identifies a monitored system or carries a credential.
 - **`gitleaks` reads shapes** — its rules catch a token or a key, so addresses are your own care.
 - **Captures live under `tmp/`** — git, the Docker context, the linter and `air` all ignore it.
 - **Credentials stay in the environment** — `.env` and `.envrc` are git-ignored, so they belong there.
-- **Advisories need a path** — `govulncheck` and CodeQL run weekly, and a report names the call path from `./cmd` that reaches the finding rather than the advisory alone.
+- **Scanners run weekly** — `govulncheck` and CodeQL, on top of every push.
+- **Advisories need a path** — name the call path from `./cmd` that reaches the finding.
