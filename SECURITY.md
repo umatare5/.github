@@ -1,6 +1,6 @@
 # Security Policy
 
-This policy covers every Prometheus exporter published under `umatare5`. Each repository carries its own `SECURITY.md` for what is specific to it, and this page for what is not.
+This policy covers every exporter published under `umatare5`. Each repository carries the rest.
 
 ## Supported Versions
 

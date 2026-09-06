@@ -1,6 +1,6 @@
 # Contributing
 
-These conventions hold for every Prometheus exporter published under `umatare5`. Each repository carries its own `CONTRIBUTING.md` for what is specific to it, and this page for what is not.
+These conventions hold for every exporter published under `umatare5`. Each repository carries the rest.
 
 ## Development
 
