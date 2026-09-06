@@ -1,0 +1,40 @@
+# Security Policy
+
+This policy covers every Prometheus exporter published under `umatare5`. Each repository carries its own `SECURITY.md` for what is specific to it, and this page for what is not.
+
+## Supported Versions
+
+Only the latest release carries fixes, and no older tag gets a patch branch. Reproduce a finding against that release before reporting it.
+
+## Reporting a Vulnerability
+
+Report privately through GitHub Security Advisories, never through an issue or a pull request. Open the repository's **Security** tab and choose **Report a vulnerability**.
+
+One maintainer works on this in their own time, so no response time is promised. The advisory goes out after the fix ships and credits the reporter unless they ask otherwise.
+
+## What to Include
+
+**Redact these first.** Neither belongs in a report.
+
+- A credential, from a flag, an environment variable, a header or a log line
+- An address, a hostname or an account identifier of a monitored system
+
+Then include the following.
+
+- **Affected versions** — the release you reproduced against, and the image tag if any.
+- **Reproduction steps** — the flags and environment variables in force, and what it was reading.
+- **Output** — the `/metrics` body or the log lines, with every value above removed.
+- **Impact** — state the exploit scenario, and what it reaches.
+- **Suggested fix** — propose a remediation where you have one; this one is optional.
+- **Disclosure status** — say whether it is shared elsewhere, and give your plan for sharing it.
+
+## Exposure
+
+- **Metrics** — `/metrics` and the landing page serve unauthenticated plain HTTP, which is the documented posture, so keep the port on a controlled path.
+- **Container** — the image is built from `scratch`, runs as UID 65534 and carries one CA bundle.
+
+## Out of Scope
+
+- A defect in the system an exporter reads belongs to that system's vendor.
+- A dependency advisory with no path reachable from `./cmd`, unless you show the reachable path.
+- An operator's own configuration, which each repository's own flag reference covers.
