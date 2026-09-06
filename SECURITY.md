@@ -33,7 +33,7 @@ Then include the following.
 - **Metrics** — `/metrics` and the landing page serve unauthenticated plain HTTP.
 - **Posture** — that is documented rather than accidental, so keep the port on a controlled path.
 - **Container** — the image is built from `scratch`, runs as UID 65534 and carries one CA bundle.
-- **The published image** — a defect in what `ghcr.io` serves is reportable, not only one in the source.
+- **The published image** — a defect in what `ghcr.io` serves is reportable, not only one in source.
 
 ## Out of Scope
 
