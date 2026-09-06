@@ -10,8 +10,6 @@ Only the latest release carries fixes, and no older tag gets a patch branch. Rep
 
 Report privately through GitHub Security Advisories, never through an issue or a pull request. Open the repository's **Security** tab and choose **Report a vulnerability**.
 
-One maintainer works on this in their own time, so no response time is promised. The advisory goes out after the fix ships and credits the reporter unless they ask otherwise.
-
 ## What to Include
 
 **Redact these first.** Neither belongs in a report.
