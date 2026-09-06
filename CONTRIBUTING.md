@@ -1,6 +1,6 @@
 # Contributing
 
-These conventions hold for every exporter published under `umatare5`. Each repository carries the rest.
+These conventions hold for every exporter under `umatare5`. Each repository carries the rest.
 
 ## Development
 
