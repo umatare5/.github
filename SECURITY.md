@@ -1,6 +1,6 @@
 # Security Policy
 
-This policy covers every prometheus exporter published under `umatare5`. Each repository carries the rest.
+This policy covers every prometheus exporter published under **@umatare5**. Each repository carries the rest.
 
 ## Supported Versions
 
