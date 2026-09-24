@@ -23,8 +23,6 @@ Install [`gotestsum`](https://github.com/gotestyourself/gotestsum), [`golangci-l
 - **The guard carries `fail_fast`** — a commit on `main` stops there, so work on a branch.
 - **Only `gitleaks` comes from `PATH`** — pre-commit builds the rest at the versions it pins.
 - **The markdown hook runs `--fix`** — it rewrites files, so reach it with `make pre-commit-test`.
-- **`make build` skips a rebuild** — the file target does nothing while the binary exists.
-- **`make clean` takes `./tmp` whole** — worktrees and fetched data go with the binary.
 
 ## Build
 
