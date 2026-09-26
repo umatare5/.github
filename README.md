@@ -1,4 +1,4 @@
-# Shared Policies
+# Shared Policies and Guidelines
 
 This repository contains shared policies and guidelines for my personal projects.
 
