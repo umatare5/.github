@@ -8,9 +8,9 @@ Only the latest release carries fixes, and no older tag gets a patch branch. Rep
 
 ## Reporting a Vulnerability
 
-Report privately through GitHub Security Advisories, never through an issue or a pull request. Open the repository's **Security** tab and choose **Report a vulnerability**.
+Report privately through **GitHub Security Advisories**.
 
-The response is best effort, with no promised window. The advisory goes out once the fix ships, carries a CVE request, and credits the reporter unless they ask otherwise.
+Never report through an issue or a pull request. The response is best effort, and no reply time is promised.
 
 ## What to Include
 
