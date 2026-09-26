@@ -21,19 +21,19 @@ The response is best effort, with no promised window. The advisory goes out once
 
 Then include the following.
 
-- **Affected versions** — the release you reproduced against, and the image tag if any.
-- **Reproduction steps** — the flags and environment variables in force, and what it was reading.
-- **Output** — the `/metrics` body or the log lines, with every value above removed.
-- **Impact** — state the exploit scenario, and what it reaches.
-- **Suggested fix** — propose a remediation where you have one; this one is optional.
-- **Disclosure status** — say whether it is shared elsewhere, and give your plan for sharing it.
+- **Affected versions** – the release you reproduced against, and the image tag if any.
+- **Reproduction steps** – the flags and environment variables in force, and what it was reading.
+- **Output** – the `/metrics` body or the log lines, with every value above removed.
+- **Impact** – state the exploit scenario, and what it reaches.
+- **Suggested fix** – propose a remediation where you have one; this one is optional.
+- **Disclosure status** – say whether it is shared elsewhere, and give your plan for sharing it.
 
 ## Exposure
 
-- **Metrics** — `/metrics` and the landing page serve unauthenticated plain HTTP.
-- **Posture** — that is documented rather than accidental, so keep the port on a controlled path.
-- **Container** — the image is built from `scratch`, runs as UID 65534 and carries one CA bundle.
-- **The published image** — a defect in what `ghcr.io` serves is reportable, not only one in source.
+- **Metrics** – `/metrics` and the landing page serve unauthenticated plain HTTP.
+- **Posture** – that is documented rather than accidental, so keep the port on a controlled path.
+- **Container** – the image is built from `scratch`, runs as UID 65534 and carries one CA bundle.
+- **The published image** – a defect in what `ghcr.io` serves is reportable, not only one in source.
 
 ## Out of Scope
 

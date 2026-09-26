@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
+  "config": {
+    "default": true,
+    "MD003": { "style": "atx" },
+    "MD004": { "style": "dash" },
+    "MD013": false,
+    "MD024": { "siblings_only": true },
+    "MD028": false,
+    "MD029": { "style": "ordered" },
+    "MD046": { "style": "fenced" },
+    "MD048": { "style": "backtick" },
+    "MD050": { "style": "asterisk" },
+    "MD054": { "url_inline": false },
+    "MD055": { "style": "leading_and_trailing" },
+    "MD060": { "style": "aligned", "aligned_delimiter": true }
+  },
+  "overrides": [
+    {
+      "filter": ["CONTRIBUTING.md"],
+      "combine": "merge",
+      "config": {
+        "MD043": {
+          "match_case": true,
+          "headings": [
+            "# Contributing",
+            "## Development",
+            "*",
+            "## Build",
+            "*",
+            "## Testing",
+            "*",
+            "## Code Style",
+            "*",
+            "## Documentation",
+            "*",
+            "## Release",
+            "*",
+            "## Pull Requests"
+          ]
+        }
+      }
+    },
+    {
+      "filter": ["README.md"],
+      "combine": "merge",
+      "config": {
+        "MD043": {
+          "match_case": true,
+          "headings": [
+            "# Shared Policies",
+            "## Prometheus Exporter",
+            "*",
+            "## CLI",
+            "*",
+            "## SDK"
+          ]
+        }
+      }
+    },
+    {
+      "filter": ["SECURITY.md"],
+      "combine": "merge",
+      "config": {
+        "MD043": {
+          "match_case": true,
+          "headings": [
+            "# Security Policy",
+            "## Supported Versions",
+            "*",
+            "## Reporting a Vulnerability",
+            "*",
+            "## What to Include",
+            "*",
+            "## Exposure",
+            "*",
+            "## Out of Scope"
+          ]
+        }
+      }
+    }
+  ],
+  "globs": ["**/*.md"],
+  "ignores": ["tmp/**"]
+}
